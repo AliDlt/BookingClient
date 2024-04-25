@@ -52,14 +52,11 @@ const Header = ({ type }) => {
 
   const fetchCities = async () => {
     try {
-      const response = await fetch(
-        ` https://stingray-equal-primarily.ngrok-free.app/city/${searchTerm}`,
-        {
-          headers: {
-            "ngrok-skip-browser-warning": "true",
-          },
-        }
-      );
+      const response = await fetch(`http://localhost:5000/city/${searchTerm}`, {
+        headers: {
+          "ngrok-skip-browser-warning": "true",
+        },
+      });
       console.log(response);
       const data = await response.json();
       setCities(data);
@@ -92,7 +89,7 @@ const Header = ({ type }) => {
       };
       console.log(postData);
       const response = await axios.post(
-        " https://stingray-equal-primarily.ngrok-free.app/search",
+        "http://localhost:5000/search",
         postData,
         {
           headers: {

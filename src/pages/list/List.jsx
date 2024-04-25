@@ -10,7 +10,7 @@ const List = () => {
   const { state } = useLocation();
 
   // Check if state exists and has hotels array
-  if (!state || !state[0] || !state[0].hotels) {
+  if (!state || !state.hotels) {
     return null; // or render some default component or message
   }
 
@@ -30,7 +30,7 @@ const List = () => {
           </div>
 
           <div className="listResult">
-            {state[0].hotels.map((hotel, index) => (
+            {state.hotels.map((hotel, index) => (
               <SearchItem key={index} hotel={hotel} />
             ))}
           </div>

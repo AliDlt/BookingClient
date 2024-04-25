@@ -239,9 +239,9 @@ const Hotel = () => {
             </div>
           </div>
           <div className="hotel-res">
-            <div className="search-box-hotel">
+            {/* <div className="search-box-hotel">
               <p>Search</p>
-            </div>
+            </div> */}
             <div className="hotelImages">
               {/* <div className="hotelImgWrapper">
               <img
@@ -316,7 +316,6 @@ const Hotel = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </div>
   );
